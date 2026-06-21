@@ -1,17 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta http-equiv="refresh" content="0; url=pages/index.html"/>
-<title>Sabarithan Palanivel — Redirecting</title>
-<script>
-  window.location.replace("pages/index.html");
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabarithan Palanivel — Technical Systems Engineer Portfolio</title>
+  <meta name="description" content="Technical systems engineer portfolio of Sabarithan Palanivel, showcasing real-time networks, file search engines, and enterprise solutions." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP & Core Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-<body style="background:#030308;color:#9292ad;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0">
-  <div style="text-align:center">
-    <p>Redirecting to immersive experience...</p>
-    <p style="font-size:0.8rem">If you are not redirected automatically, <a href="pages/index.html" style="color:#6366f1">click here</a>.</p>
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Ambient Background Grids, Laser Scanner & Spotlight -->
+  <div id="bg-grid-ambient"></div>
+  <div id="bg-dots-ambient"></div>
+  <div id="bg-spotlight"></div>
+  <div id="noise-overlay"></div>
+  <div id="scanner-line"></div>
+
+  <!-- Clean HUD Header Bar -->
+  <header class="hud-bar">
+    <div class="hud-logo" onclick="navigateTo(0)">SABARITHAN<span>.</span>P</div>
+    <nav class="nav-links">
+      <a href="#sec-landing" onclick="event.preventDefault(); navigateTo(0)">About</a>
+      <a href="#sec-vertex" onclick="event.preventDefault(); navigateTo(1)">Vertex Connect</a>
+      <a href="#sec-projects" onclick="event.preventDefault(); navigateTo(2)">Projects</a>
+      <a href="#sec-skills" onclick="event.preventDefault(); navigateTo(3)">Skills</a>
+      <a href="#sec-timeline" onclick="event.preventDefault(); navigateTo(4)">Experience</a>
+      <a href="#sec-contact" onclick="event.preventDefault(); navigateTo(5)">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Side HUD Indicator -->
+  <div class="side-hud">
+    <div class="side-hud-index">
+      <span class="active" id="hud-index-num">01</span>
+      <span style="color: var(--text-muted);">/ 06</span>
+    </div>
   </div>
+
+  <!-- Main Viewport Sections -->
+  <div id="global-viewport">
+
+    <!-- Section 1: Hero Landing -->
+    <section class="section-panel" id="sec-landing">
+      <div class="landing-grid">
+        <div class="landing-left">
+          <div class="editorial-sub">PORTFOLIO // OVERVIEW</div>
+          <h1 class="editorial-title" id="landing-title">CYBERNETIC<br>SYSTEMS<br>AT SCALE_</h1>
+          <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 560px; line-height: 1.7; margin: 28px 0 36px 0;">
+            I am a technical systems engineer specializing in low-latency WebRTC pipelines, transactional databases, and scalable distributed networks.
+          </p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <button class="cyber-btn" onclick="navigateTo(2)"><span>View Showcase</span></button>
+            <button class="cyber-btn ghost" onclick="navigateTo(5)"><span>Get In Touch</span></button>
+          </div>
+        </div>
+        
+        <div class="landing-right-showcase">
+          <div class="circle-ambient-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Vertex Connect Centerpiece -->
+    <section class="section-panel" id="sec-vertex">
+      <div class="vertex-grid">
+        <div class="vertex-left">
+          <div class="editorial-sub">FLAGSHIP PROJECT SHOWCASE</div>
+          <h2 class="editorial-title" style="font-size: clamp(2.5rem, 5.5vw, 5.5rem); line-height: 0.95;">VERTEX<br>CONNECT_</h2>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin: 20px 0; font-size: 1.05rem; max-width: 480px;">
+            A low-latency desktop collaboration hub featuring chat threads, peer video pipelines, and real-time Gemini AI streaming assistance.
+          </p>
+          
+          <div class="vertex-details-list">
+            <div class="vertex-detail-item">
+              <div class="vertex-detail-title" style="color: var(--cyber-cyan);">&lt; 42ms</div>
+              <div class="vertex-detail-desc">WebRTC Peer Latency Link</div>
+            </div>
+            <div class="vertex-detail-item">
+              <div class="vertex-detail-title">Redis Sync</div>
+              <div class="vertex-detail-desc">Workspace Coordination</div>
+            </div>
+            <div class="vertex-detail-item">
+              <div class="vertex-detail-title">Mutex Lock</div>
+              <div class="vertex-detail-desc">Atomic Presence Keys</div>
+            </div>
+            <div class="vertex-detail-item">
+              <div class="vertex-detail-title" style="color: var(--cyber-cyan);">Gemini AI</div>
+              <div class="vertex-detail-desc">Real-time Stream Assist</div>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="https://github.com/SABARITHAN-P/vertex-connect" target="_blank" class="cyber-btn"><span>Source Repository</span></a>
+            <a href="https://vertex-connect-blond.vercel.app/" target="_blank" class="cyber-btn ghost"><span>Launch Live Demo ↗</span></a>
+          </div>
+        </div>
+        
+        <div class="vertex-right">
+          <div class="tech-panel vertex-showcase-panel">
+            <div class="panel-header">
+              <span>PROJECT PREVIEW SHOWCASE</span>
+              <span style="color: var(--cyber-cyan);">VERTEX_CONNECT</span>
+            </div>
+            <div class="vertex-image-wrapper">
+              <img src="img/vertex-connect.png" alt="Vertex Connect Preview" />
+              <div class="vertex-image-overlay-info">
+                <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Collaborative Peer-to-Peer Hub</h3>
+                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.4;">
+                  Built using Socket.io cluster setups and ICE candidate signaling, verifying secure presence maps with Redis clusters.
+                </p>
+                <div class="tag-row">
+                  <span class="tech-tag">WebRTC</span>
+                  <span class="tech-tag">Socket.IO</span>
+                  <span class="tech-tag">Redis</span>
+                  <span class="tech-tag">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Projects Launch Deck (Bento Grid) -->
+    <section class="section-panel" id="sec-projects">
+      <div style="margin-bottom: 30px;">
+        <div class="editorial-sub">DEPLOYED UTILITIES // PROJECTS</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">LAUNCH DECK_</h2>
+      </div>
+      
+      <div class="projects-deck-layout">
+        <!-- File Search -->
+        <div class="tech-panel project-console" id="proj-file-search">
+          <div class="panel-header">
+            <span>01 // SEARCH.ENGINE [C++]</span>
+            <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" style="color: var(--cyber-cyan); font-family: var(--font-mono);">[Git]</a>
+          </div>
+          <div class="panel-body">
+            <div class="project-media-wrapper">
+              <img src="img/smart-file-search.png" class="project-screenshot" alt="Smart File Search Screenshot" />
+            </div>
+            <div>
+              <h3 class="project-title">Smart File Search</h3>
+              <p class="project-desc">
+                High-speed local file indexer utilizing C++ inverted database indices and TF-IDF relevance models with Node.js API bounds.
+              </p>
+            </div>
+            <div class="tag-row" style="margin-top: 8px;">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TF-IDF</span>
+            </div>
+            <div class="project-stats-row">
+              <div class="project-stat"><span class="val">~4ms</span><span class="lbl">Query Latency</span></div>
+              <div class="project-stat"><span class="val">1.2M+</span><span class="lbl">Files Capacity</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Smart Canteen -->
+        <div class="tech-panel project-console" id="proj-canteen">
+          <div class="panel-header">
+            <span>02 // TRANSACTION.SYSTEM [JAVA]</span>
+            <a href="https://github.com/SABARITHAN-P/smart-canteen-system" target="_blank" style="color: var(--cyber-cyan); font-family: var(--font-mono);">[Git]</a>
+          </div>
+          <div class="panel-body">
+            <div class="project-media-wrapper">
+              <img src="img/smartcanteen.png" class="project-screenshot" alt="Smart Canteen Screenshot" />
+            </div>
+            <div>
+              <h3 class="project-title">Smart Canteen POS</h3>
+              <p class="project-desc">
+                Role-based digital ordering console built on Java Servlets, PostgreSQL schemas, thread transaction locks, and Tomcat clusters.
+              </p>
+            </div>
+            <div class="tag-row" style="margin-top: 8px;">
+              <span class="tech-tag">Java Servlets</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Tomcat</span>
+            </div>
+            <div class="project-stats-row">
+              <div class="project-stat"><span class="val">SQL</span><span class="lbl">Postgres DB</span></div>
+              <div class="project-stat"><span class="val">Tomcat 10</span><span class="lbl">App Container</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Interactive Calendar -->
+        <div class="tech-panel project-console" id="proj-calendar">
+          <div class="panel-header">
+            <span>03 // FRONTEND.INTERFACE [REACT]</span>
+            <a href="https://github.com/SABARITHAN-P/Interactive-Calendar" target="_blank" style="color: var(--cyber-cyan); font-family: var(--font-mono);">[Git]</a>
+          </div>
+          <div class="panel-body">
+            <div class="project-media-wrapper">
+              <img src="img/interactive-calender.png" class="project-screenshot" alt="Interactive Calendar Screenshot" />
+            </div>
+            <div>
+              <h3 class="project-title">Interactive Calendar</h3>
+              <p class="project-desc">
+                Visual scheduling tool engineered using React, Canvas color-extract variables, Framer transitions, and IndexedDB local caches.
+              </p>
+            </div>
+            <div class="tag-row" style="margin-top: 8px;">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Framer Motion</span>
+              <span class="tech-tag">IndexedDB</span>
+            </div>
+            <div class="project-stats-row">
+              <div class="project-stat"><span class="val">Local</span><span class="lbl">IndexedDB Cache</span></div>
+              <div class="project-stat"><span class="val">Tailwind</span><span class="lbl">Utility tokens</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Command Center (Skills) -->
+    <section class="section-panel" id="sec-skills">
+      <div style="margin-bottom: 30px;">
+        <div class="editorial-sub">MAPPED CAPABILITY LISTS // SKILLS</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">COMMAND CENTER_</h2>
+      </div>
+      
+      <div class="skills-grid-layout">
+        <!-- Languages -->
+        <div class="tech-panel skills-category-card">
+          <div class="panel-header">
+            <span>01 // PROGRAMMING LANGUAGES</span>
+          </div>
+          <div class="panel-body">
+            <div class="skills-list-item">
+              <span class="name">JavaScript / ES6+</span>
+              <span class="level">Advanced</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">Java (JDK 17)</span>
+              <span class="level">Intermediate</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">C++ (STL)</span>
+              <span class="level">Intermediate</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">C Language</span>
+              <span class="level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend & Databases -->
+        <div class="tech-panel skills-category-card">
+          <div class="panel-header">
+            <span>02 // BACKEND & DATABASES</span>
+          </div>
+          <div class="panel-body">
+            <div class="skills-list-item">
+              <span class="name">Node.js / Express</span>
+              <span class="level">Advanced</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">PostgreSQL / MySQL</span>
+              <span class="level">Intermediate</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">MongoDB / Redis</span>
+              <span class="level">Intermediate</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">Socket.IO / WebRTC</span>
+              <span class="level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend & CS Core -->
+        <div class="tech-panel skills-category-card">
+          <div class="panel-header">
+            <span>03 // FRONTEND & CS CORE</span>
+          </div>
+          <div class="panel-body">
+            <div class="skills-list-item">
+              <span class="name">React 18</span>
+              <span class="level">Advanced</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">HTML5 / CSS3 / Tailwind</span>
+              <span class="level">Advanced</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">Data Structures (DSA)</span>
+              <span class="level">600+ Solved</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">DBMS / OOP Core</span>
+              <span class="level">Stable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Timeline & Milestones -->
+    <section class="section-panel" id="sec-timeline">
+      <div style="margin-bottom: 30px;">
+        <div class="editorial-sub">CHRONOLOGICAL HISTORIES // TIMELINE</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">SYSTEM TIMELINE_</h2>
+      </div>
+      
+      <div class="timeline-grid">
+        <div class="timeline-left">
+          <div class="timeline-scroll-area">
+            <div class="tech-panel experience-item">
+              <div class="experience-meta">
+                <span>AERIXNOVA TECHNOLOGIES</span>
+                <span>May 2026 - Present</span>
+              </div>
+              <h3 class="experience-title">Full-Stack Developer Intern</h3>
+              <p class="experience-desc">
+                Architected core payroll computations, employee document allocation nodes, and attendance check-in filters inside a production HRMS module. Optimized database query performance and adjusted indexing filters across employee lists to minimize page loads.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-right">
+          <div class="tech-panel academic-panel">
+            <div class="editorial-sub" style="margin-bottom: 12px; font-size: 0.7rem;">ACADEMIC BENCHMARKS</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700;">SSN College of Engineering</h3>
+            <p style="color: var(--text-secondary); margin-top: 4px; font-size: 0.9rem;">
+              B.E. Computer Science & Engineering (2023 - 2027)
+            </p>
+            <div class="academic-badge-row">
+              <span class="academic-badge">CGPA: 6.92 / 10</span>
+              <span class="academic-badge">Class XII: 90.5%</span>
+            </div>
+          </div>
+          
+          <div class="tech-panel" style="padding: 20px;">
+            <div class="editorial-sub" style="margin-bottom: 12px; font-size: 0.7rem;">COMPETITIVE AUDITS</div>
+            <div class="milestones-log">
+              <div class="milestone-item">
+                <span class="icon">✓</span>
+                <div class="text">Solved <strong>600+ DSA problems</strong> across competitive platforms.</div>
+              </div>
+              <div class="milestone-item">
+                <span class="icon">✓</span>
+                <div class="text"><strong>NPTEL Certification</strong>: Affective Computing.</div>
+              </div>
+              <div class="milestone-item">
+                <span class="icon">✓</span>
+                <div class="text"><strong>NPTEL Certification</strong>: Industry 4.0 & IIoT.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Secure Channel -->
+    <section class="section-panel" id="sec-contact">
+      <div style="margin-bottom: 30px;">
+        <div class="editorial-sub">ESTABLISH CHANNELS // CONTACT</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">SECURE PORT_</h2>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="tech-panel channel-info-card">
+            <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 8px; font-weight: 700;">Direct Link Channels</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.88rem; margin-bottom: 16px;">
+              Looking for engineering positions. Connect via the secure packet transmission form or establish a direct communication link.
+            </p>
+            <div class="contact-channels">
+              <a href="mailto:sabarithanpalanivel@gmail.com" class="channel-link">
+                <span>✉️ sabarithanpalanivel@gmail.com</span>
+              </a>
+              <a href="tel:+919360980651" class="channel-link">
+                <span>📱 +91 9360980651</span>
+              </a>
+              <a href="https://www.linkedin.com/in/sabarithan-palanivel-302852293/" target="_blank" class="channel-link">
+                <span>in LinkedIn Profile</span>
+              </a>
+              <a href="https://github.com/SABARITHAN-P" target="_blank" class="channel-link">
+                <span>⬡ GitHub Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-right">
+          <div class="tech-panel secure-console">
+            <div class="panel-header">
+              <span>SEND A SECURE MESSAGE</span>
+              <span style="color: var(--cyber-cyan);">SMTP_GATE</span>
+            </div>
+            <div class="secure-form" id="secureContactForm">
+              <div class="form-group">
+                <label>Your Name</label>
+                <div class="console-input-wrapper">
+                  <input type="text" id="contact-name" placeholder="Name" required autocomplete="off">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Your Email</label>
+                <div class="console-input-wrapper">
+                  <input type="email" id="contact-email" placeholder="Email Address" required autocomplete="off">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Subject</label>
+                <div class="console-input-wrapper">
+                  <input type="text" id="contact-subject" placeholder="Subject" autocomplete="off">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Message Payload</label>
+                <div class="console-input-wrapper">
+                  <textarea id="contact-message" placeholder="Type message payload..." required></textarea>
+                </div>
+              </div>
+              
+              <button class="cyber-btn" onclick="submitSecureMessage()" style="margin-top: 8px;">
+                <span>Send Message</span>
+              </button>
+              
+              <div class="secure-feedback" id="contactSecureFeedback">
+                Message transmission complete.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bottom Floating Navigation Dock -->
+  <div class="floating-dock-container">
+    <div class="dock">
+      <button class="dock-item active" onclick="navigateTo(0)" title="01 // Core Landing">
+        <span style="font-size: 1.25rem;">🏠</span>
+        <span class="dock-tooltip">01 // Core Landing</span>
+      </button>
+      <button class="dock-item" onclick="navigateTo(1)" title="02 // Vertex Centerpiece">
+        <span style="font-size: 1.25rem;">⚡</span>
+        <span class="dock-tooltip">02 // Vertex Centerpiece</span>
+      </button>
+      <button class="dock-item" onclick="navigateTo(2)" title="03 // Launch Deck">
+        <span style="font-size: 1.25rem;">🚀</span>
+        <span class="dock-tooltip">03 // Launch Deck</span>
+      </button>
+      <button class="dock-item" onclick="navigateTo(3)" title="04 // Command Center">
+        <span style="font-size: 1.25rem;">⚙️</span>
+        <span class="dock-tooltip">04 // Command Center</span>
+      </button>
+      <button class="dock-item" onclick="navigateTo(4)" title="05 // System Timeline">
+        <span style="font-size: 1.25rem;">📅</span>
+        <span class="dock-tooltip">05 // System Timeline</span>
+      </button>
+      <button class="dock-item" onclick="navigateTo(5)" title="06 // Secure Port">
+        <span style="font-size: 1.25rem;">✉️</span>
+        <span class="dock-tooltip">06 // Secure Port</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Interaction Logic -->
+  <script>
+    /* ==========================================================================
+       1. GLOBAL SYSTEM PROPERTIES
+       ========================================================================== */
+    const SECTORS = ['SEC_01_CORE', 'SEC_02_VERTEX', 'SEC_03_LAUNCH', 'SEC_04_CMDCENT', 'SEC_05_TIMELOG', 'SEC_06_SECURE'];
+    let currentSectionIndex = 0;
+    const totalSections = 6;
+
+    // Time tracker
+    const hudTime = document.getElementById('hud-time');
+    if (hudTime) {
+      setInterval(() => {
+        const now = new Date();
+        const pad = (n) => String(n).padStart(2, '0');
+        hudTime.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      }, 1000);
+    }
+
+    // Latency simulator
+    const hudLatency = document.getElementById('hud-latency');
+    if (hudLatency) {
+      setInterval(() => {
+        const latency = Math.floor(Math.random() * 8) + 26;
+        hudLatency.textContent = `${latency}ms`;
+      }, 3000);
+    }
+
+    /* ==========================================================================
+       2. CUSTOM MOUSE CURSOR & GLOW (Outfit / Linear spring implementation)
+       ========================================================================== */
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursor-ring');
+    const spotlight = document.getElementById('bg-spotlight');
+
+    let mx = 0, my = 0;
+    let rx = 0, ry = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX;
+      my = e.clientY;
+      
+      if (cursor) {
+        cursor.style.left = mx + 'px';
+        cursor.style.top = my + 'px';
+      }
+      
+      if (spotlight) {
+        spotlight.style.left = mx + 'px';
+        spotlight.style.top = my + 'px';
+      }
+    });
+
+    function updateRingPosition() {
+      if (ring) {
+        rx += (mx - rx) * 0.15;
+        ry += (my - ry) * 0.15;
+        
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+      }
+      requestAnimationFrame(updateRingPosition);
+    }
+    updateRingPosition();
+
+    // Hover triggers
+    const hoverables = 'a, button, .channel-link';
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest(hoverables)) {
+        document.body.classList.add('hovering');
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest(hoverables)) {
+        document.body.classList.remove('hovering');
+      }
+    });
+
+    /* ==========================================================================
+       3. INTERSECTION OBSERVER FOR ACTIVE SECTION TRACKING
+       ========================================================================== */
+    const sections = document.querySelectorAll('.section-panel');
+    const dockItems = document.querySelectorAll('.dock-item');
+    const hudSector = document.getElementById('hud-sector');
+    const hudIndexNum = document.getElementById('hud-index-num');
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = Array.from(sections).indexOf(entry.target);
+          currentSectionIndex = index;
+          
+          if (hudSector) hudSector.textContent = SECTORS[index];
+          if (hudIndexNum) hudIndexNum.textContent = String(index + 1).padStart(2, '0');
+          
+          dockItems.forEach((btn, idx) => {
+            btn.classList.toggle('active', idx === index);
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((sec) => observer.observe(sec));
+
+    function navigateTo(index) {
+      if (index < 0 || index >= sections.length) return;
+      sections[index].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+        e.preventDefault();
+        navigateTo(currentSectionIndex + 1);
+      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+        e.preventDefault();
+        navigateTo(currentSectionIndex - 1);
+      } else if (e.key >= '1' && e.key <= '6') {
+        navigateTo(parseInt(e.key) - 1);
+      }
+    });
+
+    /* ==========================================================================
+       4. SECURE TRANSMIT CHANNEL (CONTACT FORM)
+       ========================================================================== */
+    function submitSecureMessage() {
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const msg = document.getElementById('contact-message').value.trim();
+      const fb = document.getElementById('contactSecureFeedback');
+
+      if (!name || !email || !msg) {
+        fb.style.display = 'block';
+        fb.style.color = '#ff3b30';
+        fb.innerHTML = 'Error: Please fill out all required fields.';
+        return;
+      }
+
+      fb.style.display = 'block';
+      fb.style.color = 'var(--cyber-cyan)';
+      fb.innerHTML = 'Sending message...';
+      
+      setTimeout(() => {
+        fb.style.color = '#34c759';
+        fb.innerHTML = 'Message sent successfully! Sabarithan will get back to you shortly.';
+        
+        document.getElementById('contact-name').value = '';
+        document.getElementById('contact-email').value = '';
+        document.getElementById('contact-subject').value = '';
+        document.getElementById('contact-message').value = '';
+      }, 1000);
+    }
+
+    /* ==========================================================================
+       5. GSAP SCROLLTRIGGER CINEMATIC EFFECTS (Apple Keynote Style)
+       ========================================================================== */
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Zoom effect on Vertex Connect Showcase Card on scroll
+    gsap.fromTo('.vertex-showcase-panel', 
+      {
+        scale: 0.85,
+        opacity: 0.6,
+        y: 60
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '#sec-vertex',
+          start: 'top bottom',
+          end: 'center center',
+          scrub: true
+        }
+      }
+    );
+
+    // Stagger reveal on Projects bento cards
+    gsap.from('#sec-projects .project-console', {
+      y: 80,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '#sec-projects',
+        start: 'top 75%'
+      }
+    });
+
+    // Stagger reveal on Skills category cards
+    gsap.from('#sec-skills .skills-category-card', {
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '#sec-skills',
+        start: 'top 75%'
+      }
+    });
+
+    // Reveal section titles on scroll
+    sections.forEach(sec => {
+      const title = sec.querySelector('.editorial-title');
+      if (title) {
+        gsap.from(title, {
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sec,
+            start: 'top 80%'
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

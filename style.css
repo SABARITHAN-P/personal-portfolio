@@ -1138,6 +1138,11 @@ header.hud-bar nav.nav-links a:hover {
   justify-content: center;
 }
 
+#sec-experience, #sec-achievements {
+  justify-content: flex-start;
+  padding-top: calc(var(--header-height) + 60px);
+}
+
 .achievement-card {
   flex: 1 1 calc(33.333% - 14px);
   max-width: calc(33.333% - 14px);

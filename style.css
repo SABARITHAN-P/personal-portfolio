@@ -674,6 +674,10 @@ header.hud-bar nav.nav-links a:hover {
   margin-top: auto;
 }
 
+.project-console .project-stats-row {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .project-stat {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-subtle);
@@ -719,6 +723,7 @@ header.hud-bar nav.nav-links a:hover {
   cursor: pointer;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .project-btn.primary {
@@ -1141,6 +1146,17 @@ header.hud-bar nav.nav-links a:hover {
 #sec-experience, #sec-achievements {
   justify-content: flex-start;
   padding-top: calc(var(--header-height) + 60px);
+}
+
+#sec-vertex, #sec-projects {
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+}
+
+#sec-vertex .vertex-grid, 
+#sec-projects .projects-deck-layout {
+  height: auto !important;
 }
 
 .achievement-card {

@@ -28,7 +28,7 @@
     <nav class="nav-links">
       <a href="#sec-about" onclick="event.preventDefault(); navigateTo(1)">About</a>
       <a href="#sec-experience" onclick="event.preventDefault(); navigateTo(2)">Experience</a>
-      <a href="#sec-projects" onclick="event.preventDefault(); navigateTo(4)">Projects</a>
+      <a href="#sec-vertex" onclick="event.preventDefault(); navigateTo(3)">Projects</a>
       <a href="#sec-profiles" onclick="event.preventDefault(); navigateTo(5)">Profiles</a>
       <a href="#sec-skills" onclick="event.preventDefault(); navigateTo(6)">Skills</a>
       <a href="#sec-achievements" onclick="event.preventDefault(); navigateTo(7)">Achievements</a>
@@ -61,7 +61,7 @@
             Final-year CSE student at SSN College of Engineering with hands-on production experience. Building software that matters — from real-time platforms to enterprise systems.
           </p>
           <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <button class="cyber-btn" onclick="navigateTo(4)"><span>View Projects</span></button>
+            <button class="cyber-btn" onclick="navigateTo(3)"><span>View Projects</span></button>
             <a href="resume.pdf" target="_blank" class="cyber-btn ghost"><span>Download Resume</span></a>
             <button class="cyber-btn ghost" onclick="navigateTo(8)"><span>Contact Me</span></button>
           </div>
@@ -230,21 +230,23 @@
               <div class="vertex-detail-title" style="color: var(--cyber-cyan);">WebRTC</div>
               <div class="vertex-detail-desc">Peer-to-Peer Video & Voice</div>
             </div>
+            <div class="vertex-detail-item" style="border: none; padding-left: 0; display: flex; align-items: center;">
+              <a href="https://vertex-connect-blond.vercel.app/" target="_blank" class="cyber-btn" style="width: 100%; height: 48px; display: inline-flex; justify-content: center; align-items: center; box-sizing: border-box;">
+                <span>Live ↗</span>
+              </a>
+            </div>
             <div class="vertex-detail-item">
               <div class="vertex-detail-title">Socket.IO</div>
               <div class="vertex-detail-desc">Real-Time Signal Exchange</div>
             </div>
-            <div class="vertex-detail-item">
-              <div class="vertex-detail-title">Redis</div>
-              <div class="vertex-detail-desc">Distributed Presence Lobby</div>
-            </div>
-            <div class="vertex-detail-item">
-              <div class="vertex-detail-title" style="color: var(--cyber-cyan);">Gemini AI</div>
-              <div class="vertex-detail-desc">Contextual Assistance</div>
+            <div class="vertex-detail-item" style="border: none; padding-left: 0; display: flex; align-items: center;">
+              <a href="https://github.com/SABARITHAN-P/vertex-connect" target="_blank" class="cyber-btn ghost" style="width: 100%; height: 48px; display: inline-flex; justify-content: center; align-items: center; box-sizing: border-box;">
+                <span>Git ↗</span>
+              </a>
             </div>
           </div>
           
-          <div class="tag-row" style="margin: 22px 0 26px 0;">
+          <div class="tag-row" style="margin: 22px 0 0 0;">
             <span class="tech-tag">React</span>
             <span class="tech-tag">Node.js</span>
             <span class="tech-tag">Express.js</span>
@@ -255,11 +257,6 @@
             <span class="tech-tag">JWT</span>
             <span class="tech-tag">Cloudinary</span>
             <span class="tech-tag">Gemini AI</span>
-          </div>
-          
-          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <a href="https://github.com/SABARITHAN-P/vertex-connect" target="_blank" class="cyber-btn"><span>Source Repository</span></a>
-            <a href="https://vertex-connect-blond.vercel.app/" target="_blank" class="cyber-btn ghost"><span>Launch Live Demo ↗</span></a>
           </div>
         </div>
         
@@ -709,7 +706,7 @@
               <li><a href="#" onclick="navigateTo(0); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">01 // Home</a></li>
               <li><a href="#" onclick="navigateTo(1); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">02 // About</a></li>
               <li><a href="#" onclick="navigateTo(2); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">03 // Experience</a></li>
-              <li><a href="#" onclick="navigateTo(4); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">04 // Projects</a></li>
+              <li><a href="#" onclick="navigateTo(3); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">04 // Projects</a></li>
             </ul>
           </div>
           <!-- Col 3: Direct Connect -->

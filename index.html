@@ -75,26 +75,39 @@
           <div class="editorial-sub">FLAGSHIP PROJECT SHOWCASE</div>
           <h2 class="editorial-title" style="font-size: clamp(2.5rem, 5.5vw, 5.5rem); line-height: 0.95;">VERTEX<br>CONNECT_</h2>
           <p style="color: var(--text-secondary); line-height: 1.8; margin: 20px 0; font-size: 1.05rem; max-width: 480px;">
-            A low-latency desktop collaboration hub featuring chat threads, peer video pipelines, and real-time Gemini AI streaming assistance.
+            A real-time chat platform where users can message each other instantly, see who's online, and know when their messages are seen or delivered. It also supports live audio and video calling, and includes a built-in AI assistant that can read and answer questions about documents shared in the chat.
           </p>
           
           <div class="vertex-details-list">
             <div class="vertex-detail-item">
-              <div class="vertex-detail-title" style="color: var(--cyber-cyan);">&lt; 42ms</div>
-              <div class="vertex-detail-desc">WebRTC Peer Latency Link</div>
+              <div class="vertex-detail-title" style="color: var(--cyber-cyan);">WebRTC</div>
+              <div class="vertex-detail-desc">Peer-to-Peer Video & Voice</div>
             </div>
             <div class="vertex-detail-item">
-              <div class="vertex-detail-title">Redis Sync</div>
-              <div class="vertex-detail-desc">Workspace Coordination</div>
+              <div class="vertex-detail-title">Socket.IO</div>
+              <div class="vertex-detail-desc">Real-Time Signal Exchange</div>
             </div>
             <div class="vertex-detail-item">
-              <div class="vertex-detail-title">Mutex Lock</div>
-              <div class="vertex-detail-desc">Atomic Presence Keys</div>
+              <div class="vertex-detail-title">Redis</div>
+              <div class="vertex-detail-desc">Distributed Presence Lobby</div>
             </div>
             <div class="vertex-detail-item">
               <div class="vertex-detail-title" style="color: var(--cyber-cyan);">Gemini AI</div>
-              <div class="vertex-detail-desc">Real-time Stream Assist</div>
+              <div class="vertex-detail-desc">Contextual Assistance</div>
             </div>
+          </div>
+          
+          <div class="tag-row" style="margin: 22px 0 26px 0;">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Socket.IO</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">WebRTC</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Cloudinary</span>
+            <span class="tech-tag">Gemini AI</span>
           </div>
           
           <div style="display: flex; gap: 16px; flex-wrap: wrap;">
@@ -109,20 +122,8 @@
               <span>PROJECT PREVIEW SHOWCASE</span>
               <span style="color: var(--cyber-cyan);">VERTEX_CONNECT</span>
             </div>
-            <div class="vertex-image-wrapper">
-              <img src="img/vertex-connect.png" alt="Vertex Connect Preview" />
-              <div class="vertex-image-overlay-info">
-                <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Collaborative Peer-to-Peer Hub</h3>
-                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.4;">
-                  Built using Socket.io cluster setups and ICE candidate signaling, verifying secure presence maps with Redis clusters.
-                </p>
-                <div class="tag-row">
-                  <span class="tech-tag">WebRTC</span>
-                  <span class="tech-tag">Socket.IO</span>
-                  <span class="tech-tag">Redis</span>
-                  <span class="tech-tag">Node.js</span>
-                </div>
-              </div>
+            <div class="vertex-image-wrapper" style="height: auto;">
+              <img src="img/vertex-connect.png" alt="Vertex Connect Preview" style="width: 100%; height: auto; display: block; object-fit: contain; opacity: 1;" />
             </div>
           </div>
         </div>
@@ -141,7 +142,6 @@
         <div class="tech-panel project-console" id="proj-file-search">
           <div class="panel-header">
             <span>01 // SEARCH.ENGINE [C++]</span>
-            <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" style="color: var(--cyber-cyan); font-family: var(--font-mono);">[Git]</a>
           </div>
           <div class="panel-body">
             <div class="project-media-wrapper">
@@ -150,17 +150,22 @@
             <div>
               <h3 class="project-title">Smart File Search</h3>
               <p class="project-desc">
-                High-speed local file indexer utilizing C++ inverted database indices and TF-IDF relevance models with Node.js API bounds.
+                A fast file search tool that helps you instantly find files on your computer using keywords, even across large folders. It ranks results by relevance, lets you filter by file type, and opens the matching file with a single click — far quicker than searching manually through folders.
               </p>
             </div>
             <div class="tag-row" style="margin-top: 8px;">
               <span class="tech-tag">C++</span>
               <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">TF-IDF</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">React</span>
             </div>
             <div class="project-stats-row">
-              <div class="project-stat"><span class="val">~4ms</span><span class="lbl">Query Latency</span></div>
-              <div class="project-stat"><span class="val">1.2M+</span><span class="lbl">Files Capacity</span></div>
+              <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" style="color: var(--cyber-cyan); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
+                <span>📹 Demo</span>
+              </a>
+              <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" style="color: var(--text-secondary); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
+                <span>⬡ Git</span>
+              </a>
             </div>
           </div>
         </div>
@@ -169,26 +174,30 @@
         <div class="tech-panel project-console" id="proj-canteen">
           <div class="panel-header">
             <span>02 // TRANSACTION.SYSTEM [JAVA]</span>
-            <a href="https://github.com/SABARITHAN-P/smart-canteen-system" target="_blank" style="color: var(--cyber-cyan); font-family: var(--font-mono);">[Git]</a>
           </div>
           <div class="panel-body">
             <div class="project-media-wrapper">
               <img src="img/smartcanteen.png" class="project-screenshot" alt="Smart Canteen Screenshot" />
             </div>
             <div>
-              <h3 class="project-title">Smart Canteen POS</h3>
+              <h3 class="project-title">QuickBite</h3>
               <p class="project-desc">
-                Role-based digital ordering console built on Java Servlets, PostgreSQL schemas, thread transaction locks, and Tomcat clusters.
+                An online food ordering system for college canteens that lets students place orders and track them in real time, shop owners manage their menu and incoming orders, and admins oversee everything across multiple canteen shops. Designed to replace long physical queues with a smooth digital ordering experience.
               </p>
             </div>
             <div class="tag-row" style="margin-top: 8px;">
+              <span class="tech-tag">React</span>
               <span class="tech-tag">Java Servlets</span>
+              <span class="tech-tag">JDBC</span>
               <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Tomcat</span>
             </div>
             <div class="project-stats-row">
-              <div class="project-stat"><span class="val">SQL</span><span class="lbl">Postgres DB</span></div>
-              <div class="project-stat"><span class="val">Tomcat 10</span><span class="lbl">App Container</span></div>
+              <a href="https://smart-canteen-system-phi.vercel.app/" target="_blank" style="color: var(--cyber-cyan); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
+                <span>⚡ Demo</span>
+              </a>
+              <a href="https://github.com/SABARITHAN-P/smart-canteen-system" target="_blank" style="color: var(--text-secondary); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
+                <span>⬡ Git</span>
+              </a>
             </div>
           </div>
         </div>
@@ -197,26 +206,32 @@
         <div class="tech-panel project-console" id="proj-calendar">
           <div class="panel-header">
             <span>03 // FRONTEND.INTERFACE [REACT]</span>
-            <a href="https://github.com/SABARITHAN-P/Interactive-Calendar" target="_blank" style="color: var(--cyber-cyan); font-family: var(--font-mono);">[Git]</a>
           </div>
           <div class="panel-body">
             <div class="project-media-wrapper">
               <img src="img/interactive-calender.png" class="project-screenshot" alt="Interactive Calendar Screenshot" />
             </div>
             <div>
-              <h3 class="project-title">Interactive Calendar</h3>
+              <h3 class="project-title">Interactive Calendar with Notes & Dynamic Theming</h3>
               <p class="project-desc">
-                Visual scheduling tool engineered using React, Canvas color-extract variables, Framer transitions, and IndexedDB local caches.
+                A digital calendar where you can add notes to a single day, a date range, or an entire month. Its colors and theme automatically change based on the month's banner image, and it works smoothly on both desktop and mobile with swipe and touch gestures for navigation.
               </p>
             </div>
             <div class="tag-row" style="margin-top: 8px;">
               <span class="tech-tag">React</span>
+              <span class="tech-tag">Tailwind CSS</span>
               <span class="tech-tag">Framer Motion</span>
-              <span class="tech-tag">IndexedDB</span>
+              <span class="tech-tag">date-fns</span>
+              <span class="tech-tag">Canvas API</span>
+              <span class="tech-tag">localStorage</span>
             </div>
             <div class="project-stats-row">
-              <div class="project-stat"><span class="val">Local</span><span class="lbl">IndexedDB Cache</span></div>
-              <div class="project-stat"><span class="val">Tailwind</span><span class="lbl">Utility tokens</span></div>
+              <a href="https://interactive-calendar-ivory.vercel.app/" target="_blank" style="color: var(--cyber-cyan); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
+                <span>⚡ Demo</span>
+              </a>
+              <a href="https://github.com/SABARITHAN-P/Interactive-Calendar" target="_blank" style="color: var(--text-secondary); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
+                <span>⬡ Git</span>
+              </a>
             </div>
           </div>
         </div>

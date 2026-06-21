@@ -23,16 +23,16 @@
   <div id="noise-overlay"></div>
   <div id="scanner-line"></div>
 
-  <!-- Clean HUD Header Bar -->
   <header class="hud-bar">
     <div class="hud-logo" onclick="navigateTo(0)">SABARITHAN<span>.</span>P</div>
     <nav class="nav-links">
-      <a href="#sec-landing" onclick="event.preventDefault(); navigateTo(0)">About</a>
-      <a href="#sec-vertex" onclick="event.preventDefault(); navigateTo(1)">Vertex Connect</a>
-      <a href="#sec-projects" onclick="event.preventDefault(); navigateTo(2)">Projects</a>
-      <a href="#sec-skills" onclick="event.preventDefault(); navigateTo(3)">Skills</a>
-      <a href="#sec-timeline" onclick="event.preventDefault(); navigateTo(4)">Experience</a>
-      <a href="#sec-contact" onclick="event.preventDefault(); navigateTo(5)">Contact</a>
+      <a href="#sec-about" onclick="event.preventDefault(); navigateTo(1)">About</a>
+      <a href="#sec-experience" onclick="event.preventDefault(); navigateTo(2)">Experience</a>
+      <a href="#sec-projects" onclick="event.preventDefault(); navigateTo(4)">Projects</a>
+      <a href="#sec-profiles" onclick="event.preventDefault(); navigateTo(5)">Profiles</a>
+      <a href="#sec-skills" onclick="event.preventDefault(); navigateTo(6)">Skills</a>
+      <a href="#sec-achievements" onclick="event.preventDefault(); navigateTo(7)">Achievements</a>
+      <a href="#sec-contact" onclick="event.preventDefault(); navigateTo(8)">Contact</a>
     </nav>
   </header>
 
@@ -40,7 +40,7 @@
   <div class="side-hud">
     <div class="side-hud-index">
       <span class="active" id="hud-index-num">01</span>
-      <span style="color: var(--text-muted);">/ 06</span>
+      <span style="color: var(--text-muted);">/ 09</span>
     </div>
   </div>
 
@@ -51,14 +51,19 @@
     <section class="section-panel" id="sec-landing">
       <div class="landing-grid">
         <div class="landing-left">
-          <div class="editorial-sub">PORTFOLIO // OVERVIEW</div>
-          <h1 class="editorial-title" id="landing-title">CYBERNETIC<br>SYSTEMS<br>AT SCALE_</h1>
+          <div class="status-indicator-badge" style="margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--cyber-cyan); border: 1px solid var(--border-subtle); padding: 6px 12px; border-radius: 20px; background: rgba(0, 240, 255, 0.04); width: fit-content;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #34c759; box-shadow: 0 0 8px #34c759; animation: pulse 2s infinite;"></span>
+            <span>Open to opportunities</span>
+          </div>
+          <div class="editorial-sub">FULL STACK DEVELOPER // CHENNAI, INDIA</div>
+          <h1 class="editorial-title" id="landing-title">Sabarithan<br>Palanivel_</h1>
           <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 560px; line-height: 1.7; margin: 28px 0 36px 0;">
-            I am a technical systems engineer specializing in low-latency WebRTC pipelines, transactional databases, and scalable distributed networks.
+            Final-year CSE student at SSN College of Engineering with hands-on production experience. Building software that matters — from real-time platforms to enterprise systems.
           </p>
           <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <button class="cyber-btn" onclick="navigateTo(2)"><span>View Showcase</span></button>
-            <button class="cyber-btn ghost" onclick="navigateTo(5)"><span>Get In Touch</span></button>
+            <button class="cyber-btn" onclick="navigateTo(4)"><span>View Projects</span></button>
+            <a href="resume.pdf" target="_blank" class="cyber-btn ghost"><span>Download Resume</span></a>
+            <button class="cyber-btn ghost" onclick="navigateTo(8)"><span>Contact Me</span></button>
           </div>
         </div>
         
@@ -68,7 +73,149 @@
       </div>
     </section>
 
-    <!-- Section 2: Vertex Connect Centerpiece -->
+    <!-- Section 2: About / Engineering Mindset -->
+    <section class="section-panel" id="sec-about">
+      <div style="margin-bottom: 24px;">
+        <div class="editorial-sub">PROFILE // ABOUT ME</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">ABOUT ME_</h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-left">
+          <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">
+            Engineering mindset.<br><span style="color: var(--cyber-cyan);">Real-world experience.</span>
+          </h3>
+          
+          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 14px;">
+            I am a final-year Computer Science and Engineering student at SSN College of Engineering with hands-on experience contributing to production-oriented software systems and building full-stack applications.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 14px;">
+            Through internship experience and personal projects, I have worked on enterprise HRMS platforms, real-time communication systems, business applications, and search solutions.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 0;">
+            I enjoy building products from scratch, solving challenging problems, and creating technology that delivers real value to users. My focus is on understanding the engineering principles behind scalable, maintainable, and efficient software systems.
+          </p>
+          
+          <div class="about-highlights">
+            
+            <div class="tech-panel">
+              <div class="panel-body" style="padding: 16px; display: flex; gap: 12px; align-items: center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.5 1z"/></svg>
+                <div>
+                  <h4 style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: #fff;">Systems Thinking</h4>
+                  <p style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">Scalable architecture & code</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tech-panel">
+              <div class="panel-body" style="padding: 16px; display: flex; gap: 12px; align-items: center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4.5a2.18 2.18 0 0 1 2.91.09c.79.79.79 2.07-.09 2.91A22 22 0 0 0 9 12z"/><path d="M15 15v5s-3.03-.55-4.5-2a2.18 2.18 0 0 1 .09-2.91c.79-.79 2.07-.79 2.91.09A22 22 0 0 0 15 15z"/></svg>
+                <div>
+                  <h4 style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: #fff;">Production Experience</h4>
+                  <p style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">Real enterprise product dev</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tech-panel">
+              <div class="panel-body" style="padding: 16px; display: flex; gap: 12px; align-items: center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <div>
+                  <h4 style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: #fff;">Problem Solver</h4>
+                  <p style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">600+ DSA problems solved</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tech-panel">
+              <div class="panel-body" style="padding: 16px; display: flex; gap: 12px; align-items: center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                <div>
+                  <h4 style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: #fff;">Continuous Learner</h4>
+                  <p style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">Expanding modern stacks</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="about-right" style="display: flex; flex-direction: column; gap: 20px;">
+          
+          <div class="tech-panel">
+            <div class="panel-header">
+              <span>ACADEMICS // EDUCATION</span>
+              <span style="color: var(--cyber-cyan);">SSN_CSE</span>
+            </div>
+            <div class="panel-body" style="padding: 20px;">
+              <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #fff;">SSN College of Engineering</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">B.E. in Computer Science and Engineering</p>
+              
+              <div class="tag-row" style="margin-top: 14px;">
+                <span class="tech-tag">Graduating 2027</span>
+                <span class="tech-tag" style="color: var(--cyber-cyan); border-color: rgba(0, 240, 255, 0.2);">CGPA 6.92 / 10</span>
+                <span class="tech-tag">Class XII: 90.5%</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tech-panel">
+            <div class="panel-header">
+              <span>WHAT SETS ME APART</span>
+              <span style="color: var(--cyber-cyan);">DIFFERENTIATORS</span>
+            </div>
+            <div class="panel-body" style="padding: 20px;">
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 12px;">
+                While still pursuing my degree, I have gained hands-on experience working on production-oriented applications. I enjoy understanding how real software systems work, contributing to product development, solving implementation challenges, and continuously expanding my technical knowledge.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin: 0;">
+                My focus is not just on building projects, but on understanding the engineering principles behind scalable and maintainable software.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Professional Experience -->
+    <section class="section-panel" id="sec-experience">
+      <div style="margin-bottom: 30px;">
+        <div class="editorial-sub">PROFESSIONAL HISTORY // EXPERIENCE</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">EXPERIENCE_</h2>
+      </div>
+      
+      <div class="experience-grid">
+        <div class="experience-left">
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-top: 10px; font-size: 1.05rem; max-width: 480px;">
+            Worked on a production HRMS platform used for managing employee, payroll, attendance, and leave operations. Gained hands-on experience by contributing to real business workflows, improving usability, and building features for everyday users.
+          </p>
+        </div>
+        <div class="experience-right">
+          <div class="tech-panel experience-item" style="padding: 24px;">
+            <div class="experience-meta" style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.8rem; color: var(--cyber-cyan); border-bottom: 1px dashed var(--border-subtle); padding-bottom: 12px; margin-bottom: 16px;">
+              <span>AERIXNOVA TECHNOLOGIES</span>
+              <span style="color: var(--text-secondary);">May 2026 - June 2026</span>
+            </div>
+            <h3 class="experience-title" style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px;">AI Engineer Intern</h3>
+            <p class="experience-desc" style="color: var(--text-secondary); line-height: 1.6; font-size: 0.92rem;">
+              Contributed to the AIMS HRMS platform across employee, payroll, attendance, leave, and performance modules. Implemented new features, improved workflows, enhanced user experience, and supported role-based functionalities within a production business application.
+            </p>
+            <div class="tag-row" style="margin-top: 16px;">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Tailwind</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">Prisma</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Vertex Connect Centerpiece -->
     <section class="section-panel" id="sec-vertex">
       <div class="vertex-grid">
         <div class="vertex-left">
@@ -130,7 +277,7 @@
       </div>
     </section>
 
-    <!-- Section 3: Projects Launch Deck (Bento Grid) -->
+    <!-- Section 4: Projects Launch Deck (Bento Grid) -->
     <section class="section-panel" id="sec-projects">
       <div style="margin-bottom: 30px;">
         <div class="editorial-sub">DEPLOYED UTILITIES // PROJECTS</div>
@@ -141,7 +288,7 @@
         <!-- File Search -->
         <div class="tech-panel project-console" id="proj-file-search">
           <div class="panel-header">
-            <span>01 // SEARCH.ENGINE [C++]</span>
+            <span>01 // FILE SEARCH ENGINE</span>
           </div>
           <div class="panel-body">
             <div class="project-media-wrapper">
@@ -153,18 +300,18 @@
                 A fast file search tool that helps you instantly find files on your computer using keywords, even across large folders. It ranks results by relevance, lets you filter by file type, and opens the matching file with a single click — far quicker than searching manually through folders.
               </p>
             </div>
-            <div class="tag-row" style="margin-top: 8px;">
+            <div class="tag-row">
               <span class="tech-tag">C++</span>
               <span class="tech-tag">Node.js</span>
               <span class="tech-tag">Express.js</span>
               <span class="tech-tag">React</span>
             </div>
             <div class="project-stats-row">
-              <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" style="color: var(--cyber-cyan); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
-                <span>📹 Demo</span>
+              <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" class="project-btn primary">
+                Demo ↗
               </a>
-              <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" style="color: var(--text-secondary); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
-                <span>⬡ Git</span>
+              <a href="https://github.com/SABARITHAN-P/Smart-File-Search" target="_blank" class="project-btn secondary">
+                Git ↗
               </a>
             </div>
           </div>
@@ -173,30 +320,30 @@
         <!-- Smart Canteen -->
         <div class="tech-panel project-console" id="proj-canteen">
           <div class="panel-header">
-            <span>02 // TRANSACTION.SYSTEM [JAVA]</span>
+            <span>02 // SMART CANTEEN SYSTEM</span>
           </div>
           <div class="panel-body">
             <div class="project-media-wrapper">
               <img src="img/smartcanteen.png" class="project-screenshot" alt="Smart Canteen Screenshot" />
             </div>
             <div>
-              <h3 class="project-title">QuickBite</h3>
+              <h3 class="project-title">SmartCanteen</h3>
               <p class="project-desc">
                 An online food ordering system for college canteens that lets students place orders and track them in real time, shop owners manage their menu and incoming orders, and admins oversee everything across multiple canteen shops. Designed to replace long physical queues with a smooth digital ordering experience.
               </p>
             </div>
-            <div class="tag-row" style="margin-top: 8px;">
+            <div class="tag-row">
               <span class="tech-tag">React</span>
               <span class="tech-tag">Java Servlets</span>
               <span class="tech-tag">JDBC</span>
               <span class="tech-tag">PostgreSQL</span>
             </div>
             <div class="project-stats-row">
-              <a href="https://smart-canteen-system-phi.vercel.app/" target="_blank" style="color: var(--cyber-cyan); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
-                <span>⚡ Demo</span>
+              <a href="https://smart-canteen-system-phi.vercel.app/" target="_blank" class="project-btn primary">
+                Demo ↗
               </a>
-              <a href="https://github.com/SABARITHAN-P/smart-canteen-system" target="_blank" style="color: var(--text-secondary); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
-                <span>⬡ Git</span>
+              <a href="https://github.com/SABARITHAN-P/smart-canteen-system" target="_blank" class="project-btn secondary">
+                Git ↗
               </a>
             </div>
           </div>
@@ -205,19 +352,19 @@
         <!-- Interactive Calendar -->
         <div class="tech-panel project-console" id="proj-calendar">
           <div class="panel-header">
-            <span>03 // FRONTEND.INTERFACE [REACT]</span>
+            <span>03 // INTERACTIVE CALENDAR</span>
           </div>
           <div class="panel-body">
             <div class="project-media-wrapper">
               <img src="img/interactive-calender.png" class="project-screenshot" alt="Interactive Calendar Screenshot" />
             </div>
             <div>
-              <h3 class="project-title">Interactive Calendar with Notes & Dynamic Theming</h3>
+              <h3 class="project-title">Interactive Calendar</h3>
               <p class="project-desc">
                 A digital calendar where you can add notes to a single day, a date range, or an entire month. Its colors and theme automatically change based on the month's banner image, and it works smoothly on both desktop and mobile with swipe and touch gestures for navigation.
               </p>
             </div>
-            <div class="tag-row" style="margin-top: 8px;">
+            <div class="tag-row">
               <span class="tech-tag">React</span>
               <span class="tech-tag">Tailwind CSS</span>
               <span class="tech-tag">Framer Motion</span>
@@ -226,11 +373,11 @@
               <span class="tech-tag">localStorage</span>
             </div>
             <div class="project-stats-row">
-              <a href="https://interactive-calendar-ivory.vercel.app/" target="_blank" style="color: var(--cyber-cyan); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
-                <span>⚡ Demo</span>
+              <a href="https://interactive-calendar-ivory.vercel.app/" target="_blank" class="project-btn primary">
+                Demo ↗
               </a>
-              <a href="https://github.com/SABARITHAN-P/Interactive-Calendar" target="_blank" style="color: var(--text-secondary); display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;">
-                <span>⬡ Git</span>
+              <a href="https://github.com/SABARITHAN-P/Interactive-Calendar" target="_blank" class="project-btn secondary">
+                Git ↗
               </a>
             </div>
           </div>
@@ -238,7 +385,110 @@
       </div>
     </section>
 
-    <!-- Section 4: Command Center (Skills) -->
+    <!-- Section 5: Coding Profiles -->
+    <section class="section-panel" id="sec-profiles">
+      <div style="margin-bottom: 30px;">
+        <div class="editorial-sub">CODE BASES // PROFILES</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">CODING PROFILES_</h2>
+      </div>
+      
+      <div class="profiles-grid">
+        <!-- GitHub Profile Card -->
+        <div class="tech-panel profile-card">
+          <div class="panel-header">
+            <span>REPOSITORY PLATFORM // GIT</span>
+            <span style="color: var(--cyber-cyan);">GITHUB</span>
+          </div>
+          <div class="panel-body" style="display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 41px); min-height: 240px; box-sizing: border-box;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                <span class="profile-logo-icon" style="color: var(--cyber-cyan); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 8px; background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.15); flex-shrink: 0;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </span>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: #fff; margin: 0;">GitHub</h3>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">@SABARITHAN-P</span>
+                </div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 20px;">
+                Source code for all personal projects and contributions. Each repository reflects my approach to clean code, documentation, and engineering practices.
+              </p>
+            </div>
+            
+            <div>
+              <div class="project-stats-row" style="margin-bottom: 18px; border-top: 1px dashed var(--border-subtle); padding-top: 14px;">
+                <div class="project-stat">
+                  <span class="val">4+</span>
+                  <span class="lbl">Repos</span>
+                </div>
+                <div class="project-stat">
+                  <span class="val">Full</span>
+                  <span class="lbl">Stack</span>
+                </div>
+                <div class="project-stat">
+                  <span class="val" style="color: #34c759;">Active</span>
+                  <span class="lbl">Status</span>
+                </div>
+              </div>
+              
+              <a href="https://github.com/SABARITHAN-P" target="_blank" class="cyber-btn" style="width: 100%; justify-content: center;">
+                <span>View GitHub Profile ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- LeetCode Profile Card -->
+        <div class="tech-panel profile-card">
+          <div class="panel-header">
+            <span>DSA AUDITING PLATFORM // LC</span>
+            <span style="color: var(--cyber-cyan);">LEETCODE</span>
+          </div>
+          <div class="panel-body" style="display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 41px); min-height: 240px; box-sizing: border-box;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                <span class="profile-logo-icon" style="color: var(--cyber-cyan); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 8px; background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.15); flex-shrink: 0;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16.102 17.93l-2.69 2.607c-.466.451-1.111.696-1.777.696s-1.31-.245-1.777-.696L4.435 15.21c-.958-.927-.958-2.43 0-3.356l5.423-5.254c.466-.451 1.11-.696 1.777-.696s1.31.245 1.777.696l2.69 2.607c.28.272.28.71 0 .983a.669.669 0 0 1-.963 0l-2.69-2.607a.972.972 0 0 0-.824-.265.986.986 0 0 0-.71.503L5.4 13.532c-.378.366-.378.96 0 1.326l5.423 5.253c.188.182.44.283.704.283.264 0 .516-.101.704-.283l2.69-2.607a.669.669 0 0 1 .963 0c.28.272.28.71 0 .983z" fill="currentColor"/>
+                    <path d="M13.42 11.233c.28-.272.733-.272 1.013 0l5.423 5.253c.958.927.958 2.43 0 3.356l-5.423 5.254c-.466.451-1.111.696-1.777.696s-1.31-.245-1.777-.696l-2.69-2.607a.669.669 0 0 1 0-.983.696.696 0 0 1 .963 0l2.69 2.607c.188.182.44.283.704.283.264 0 .516-.101.704-.283l5.423-5.253c.378-.366.378-.96 0-1.326l-5.423-5.253a.696.696 0 0 1 0-.983z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: #fff; margin: 0;">LeetCode</h3>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">@Sabarithan</span>
+                </div>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 20px;">
+                Consistent problem-solving practice focused on DSA patterns expected at Google, Amazon, Microsoft, and other product-based companies.
+              </p>
+            </div>
+            
+            <div>
+              <div class="project-stats-row" style="margin-bottom: 18px; border-top: 1px dashed var(--border-subtle); padding-top: 14px;">
+                <div class="project-stat">
+                  <span class="val">600+</span>
+                  <span class="lbl">Solved</span>
+                </div>
+                <div class="project-stat">
+                  <span class="val">DSA</span>
+                  <span class="lbl">Focused</span>
+                </div>
+                <div class="project-stat">
+                  <span class="val" style="color: #34c759;">Active</span>
+                  <span class="lbl">Streak</span>
+                </div>
+              </div>
+              
+              <a href="https://leetcode.com/u/Sabarithan/" target="_blank" class="cyber-btn" style="width: 100%; justify-content: center;">
+                <span>View LeetCode Profile ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Command Center (Skills) -->
     <section class="section-panel" id="sec-skills">
       <div style="margin-bottom: 30px;">
         <div class="editorial-sub">MAPPED CAPABILITY LISTS // SKILLS</div>
@@ -246,217 +496,277 @@
       </div>
       
       <div class="skills-grid-layout">
-        <!-- Languages -->
+        <!-- 01 // CORE LANGUAGES & LOGIC -->
         <div class="tech-panel skills-category-card">
           <div class="panel-header">
-            <span>01 // PROGRAMMING LANGUAGES</span>
+            <span>01 // CORE LANGUAGES & LOGIC</span>
           </div>
           <div class="panel-body">
             <div class="skills-list-item">
               <span class="name">JavaScript / ES6+</span>
-              <span class="level">Advanced</span>
             </div>
             <div class="skills-list-item">
-              <span class="name">Java (JDK 17)</span>
-              <span class="level">Intermediate</span>
+              <span class="name">Java</span>
             </div>
             <div class="skills-list-item">
-              <span class="name">C++ (STL)</span>
-              <span class="level">Intermediate</span>
+              <span class="name">C++</span>
             </div>
             <div class="skills-list-item">
               <span class="name">C Language</span>
-              <span class="level">Intermediate</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">Data Structures (DSA)</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">DBMS / OOP Core</span>
             </div>
           </div>
         </div>
 
-        <!-- Backend & Databases -->
+        <!-- 02 // BACKEND, DATABASE & INFRASTRUCTURE -->
         <div class="tech-panel skills-category-card">
           <div class="panel-header">
-            <span>02 // BACKEND & DATABASES</span>
+            <span>02 // BACKEND, DATABASE & AUTH</span>
           </div>
           <div class="panel-body">
             <div class="skills-list-item">
               <span class="name">Node.js / Express</span>
-              <span class="level">Advanced</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">Java Servlets / JDBC</span>
             </div>
             <div class="skills-list-item">
               <span class="name">PostgreSQL / MySQL</span>
-              <span class="level">Intermediate</span>
             </div>
             <div class="skills-list-item">
               <span class="name">MongoDB / Redis</span>
-              <span class="level">Intermediate</span>
             </div>
             <div class="skills-list-item">
               <span class="name">Socket.IO / WebRTC</span>
-              <span class="level">Intermediate</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">REST APIs</span>
             </div>
           </div>
         </div>
 
-        <!-- Frontend & CS Core -->
+        <!-- 03 // DEV TOOLS & FRONTEND -->
         <div class="tech-panel skills-category-card">
           <div class="panel-header">
-            <span>03 // FRONTEND & CS CORE</span>
+            <span>03 // DEV TOOLS & FRONTEND</span>
           </div>
           <div class="panel-body">
             <div class="skills-list-item">
               <span class="name">React 18</span>
-              <span class="level">Advanced</span>
             </div>
             <div class="skills-list-item">
               <span class="name">HTML5 / CSS3 / Tailwind</span>
-              <span class="level">Advanced</span>
             </div>
             <div class="skills-list-item">
-              <span class="name">Data Structures (DSA)</span>
-              <span class="level">600+ Solved</span>
+              <span class="name">VS Code / Eclipse</span>
             </div>
             <div class="skills-list-item">
-              <span class="name">DBMS / OOP Core</span>
-              <span class="level">Stable</span>
+              <span class="name">Git</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">GitHub</span>
+            </div>
+            <div class="skills-list-item">
+              <span class="name">Postman</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 5: Timeline & Milestones -->
-    <section class="section-panel" id="sec-timeline">
+
+
+    <!-- Section 8: Achievements & Certifications -->
+    <section class="section-panel" id="sec-achievements">
       <div style="margin-bottom: 30px;">
-        <div class="editorial-sub">CHRONOLOGICAL HISTORIES // TIMELINE</div>
-        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">SYSTEM TIMELINE_</h2>
+        <div class="editorial-sub">MILESTONES & CERTIFICATIONS // AUDITS</div>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">ACHIEVEMENTS_</h2>
       </div>
       
-      <div class="timeline-grid">
-        <div class="timeline-left">
-          <div class="timeline-scroll-area">
-            <div class="tech-panel experience-item">
-              <div class="experience-meta">
-                <span>AERIXNOVA TECHNOLOGIES</span>
-                <span>May 2026 - Present</span>
-              </div>
-              <h3 class="experience-title">Full-Stack Developer Intern</h3>
-              <p class="experience-desc">
-                Architected core payroll computations, employee document allocation nodes, and attendance check-in filters inside a production HRMS module. Optimized database query performance and adjusted indexing filters across employee lists to minimize page loads.
-              </p>
+      <div class="achievements-grid">
+        
+        <div class="tech-panel achievement-card">
+          <div class="panel-body" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--cyber-cyan);"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"/><path d="M12 2a7 7 0 0 0-7 7c0 2.52 2 6 7 6s7-3.48 7-7a7 7 0 0 0-7-7z"/></svg>
+            <div style="font-size: 0.8rem; line-height: 1.5; color: var(--text-secondary);">
+              Practiced <strong>600+ Data Structures and Algorithms problems</strong> across competitive coding platforms, targeting product company interview patterns <a href="https://leetcode.com/u/Sabarithan/" target="_blank" style="color: var(--cyber-cyan); text-decoration: none; margin-left: 6px; font-family: var(--font-mono); font-size: 0.75rem; white-space: nowrap;">[Verify ↗]</a>
             </div>
           </div>
         </div>
         
-        <div class="timeline-right">
-          <div class="tech-panel academic-panel">
-            <div class="editorial-sub" style="margin-bottom: 12px; font-size: 0.7rem;">ACADEMIC BENCHMARKS</div>
-            <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700;">SSN College of Engineering</h3>
-            <p style="color: var(--text-secondary); margin-top: 4px; font-size: 0.9rem;">
-              B.E. Computer Science & Engineering (2023 - 2027)
-            </p>
-            <div class="academic-badge-row">
-              <span class="academic-badge">CGPA: 6.92 / 10</span>
-              <span class="academic-badge">Class XII: 90.5%</span>
-            </div>
-          </div>
-          
-          <div class="tech-panel" style="padding: 20px;">
-            <div class="editorial-sub" style="margin-bottom: 12px; font-size: 0.7rem;">COMPETITIVE AUDITS</div>
-            <div class="milestones-log">
-              <div class="milestone-item">
-                <span class="icon">✓</span>
-                <div class="text">Solved <strong>600+ DSA problems</strong> across competitive platforms.</div>
-              </div>
-              <div class="milestone-item">
-                <span class="icon">✓</span>
-                <div class="text"><strong>NPTEL Certification</strong>: Affective Computing.</div>
-              </div>
-              <div class="milestone-item">
-                <span class="icon">✓</span>
-                <div class="text"><strong>NPTEL Certification</strong>: Industry 4.0 & IIoT.</div>
-              </div>
+        <div class="tech-panel achievement-card">
+          <div class="panel-body" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--cyber-cyan);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div style="font-size: 0.8rem; line-height: 1.5; color: var(--text-secondary);">
+              <strong>NPTEL Certification</strong> — Affective Computing: Understanding emotion-aware systems and their engineering applications <a href="docs/Affective%20Computing.pdf" target="_blank" style="color: var(--cyber-cyan); text-decoration: none; margin-left: 6px; font-family: var(--font-mono); font-size: 0.75rem; white-space: nowrap;">[Verify ↗]</a>
             </div>
           </div>
         </div>
+        
+        <div class="tech-panel achievement-card">
+          <div class="panel-body" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--cyber-cyan);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div style="font-size: 0.8rem; line-height: 1.5; color: var(--text-secondary);">
+              <strong>NPTEL Certification</strong> — Industry 4.0 and Industrial Internet of Things: Next-gen industrial systems knowledge <a href="docs/Introduction%20to%20Industry%204.0%20and%20Industrial%20Internet%20of%20Things.pdf" target="_blank" style="color: var(--cyber-cyan); text-decoration: none; margin-left: 6px; font-family: var(--font-mono); font-size: 0.75rem; white-space: nowrap;">[Verify ↗]</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tech-panel achievement-card">
+          <div class="panel-body" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--cyber-cyan);"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+            <div style="font-size: 0.8rem; line-height: 1.5; color: var(--text-secondary);">
+              Scored <strong>90.5% in Class XII</strong> demonstrating strong academic foundation before engineering
+            </div>
+          </div>
+        </div>
+        
+        <div class="tech-panel achievement-card">
+          <div class="panel-body" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--cyber-cyan);"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <div style="font-size: 0.8rem; line-height: 1.5; color: var(--text-secondary);">
+              Built <strong>3 full-stack projects</strong> spanning real-time platforms, search engines, business apps, and frontend engineering
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
 
-    <!-- Section 6: Secure Channel -->
-    <section class="section-panel" id="sec-contact">
-      <div style="margin-bottom: 30px;">
+    <!-- Section 9: Secure Port -->
+    <section class="section-panel" id="sec-contact" style="display: flex; flex-direction: column; min-height: 100vh; height: auto; box-sizing: border-box; padding-bottom: 24px; overflow-y: auto !important;">
+      <div style="margin-bottom: 20px;">
         <div class="editorial-sub">ESTABLISH CHANNELS // CONTACT</div>
         <h2 class="editorial-title" style="font-size: clamp(2rem, 5vw, 5rem); line-height: 1;">SECURE PORT_</h2>
       </div>
       
-      <div class="contact-grid">
-        <div class="contact-left">
-          <div class="tech-panel channel-info-card">
-            <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 8px; font-weight: 700;">Direct Link Channels</h3>
-            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.88rem; margin-bottom: 16px;">
-              Looking for engineering positions. Connect via the secure packet transmission form or establish a direct communication link.
-            </p>
-            <div class="contact-channels">
-              <a href="mailto:sabarithanpalanivel@gmail.com" class="channel-link">
-                <span>✉️ sabarithanpalanivel@gmail.com</span>
-              </a>
-              <a href="tel:+919360980651" class="channel-link">
-                <span>📱 +91 9360980651</span>
-              </a>
-              <a href="https://www.linkedin.com/in/sabarithan-palanivel-302852293/" target="_blank" class="channel-link">
-                <span>in LinkedIn Profile</span>
-              </a>
-              <a href="https://github.com/SABARITHAN-P" target="_blank" class="channel-link">
-                <span>⬡ GitHub Profile</span>
-              </a>
-            </div>
+      <!-- Contact Form Centered -->
+      <div style="max-width: 650px; margin: 0 auto 24px auto; width: 100%;">
+        <div class="tech-panel secure-console">
+          <div class="panel-header">
+            <span>SEND A SECURE MESSAGE</span>
+            <span style="color: var(--cyber-cyan);">SMTP_GATE</span>
           </div>
-        </div>
-        
-        <div class="contact-right">
-          <div class="tech-panel secure-console">
-            <div class="panel-header">
-              <span>SEND A SECURE MESSAGE</span>
-              <span style="color: var(--cyber-cyan);">SMTP_GATE</span>
+          <div class="secure-form" id="secureContactForm">
+            <div class="form-group">
+              <label>Your Name</label>
+              <div class="console-input-wrapper">
+                <input type="text" id="contact-name" placeholder="Name" required autocomplete="off">
+              </div>
             </div>
-            <div class="secure-form" id="secureContactForm">
-              <div class="form-group">
-                <label>Your Name</label>
-                <div class="console-input-wrapper">
-                  <input type="text" id="contact-name" placeholder="Name" required autocomplete="off">
-                </div>
+            
+            <div class="form-group">
+              <label>Your Email</label>
+              <div class="console-input-wrapper">
+                <input type="email" id="contact-email" placeholder="Email Address" required autocomplete="off">
               </div>
-              
-              <div class="form-group">
-                <label>Your Email</label>
-                <div class="console-input-wrapper">
-                  <input type="email" id="contact-email" placeholder="Email Address" required autocomplete="off">
-                </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Subject</label>
+              <div class="console-input-wrapper">
+                <input type="text" id="contact-subject" placeholder="Subject" autocomplete="off">
               </div>
-              
-              <div class="form-group">
-                <label>Subject</label>
-                <div class="console-input-wrapper">
-                  <input type="text" id="contact-subject" placeholder="Subject" autocomplete="off">
-                </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Message Payload</label>
+              <div class="console-input-wrapper">
+                <textarea id="contact-message" placeholder="Type message payload..." required></textarea>
               </div>
-              
-              <div class="form-group">
-                <label>Message Payload</label>
-                <div class="console-input-wrapper">
-                  <textarea id="contact-message" placeholder="Type message payload..." required></textarea>
-                </div>
-              </div>
-              
-              <button class="cyber-btn" onclick="submitSecureMessage()" style="margin-top: 8px;">
-                <span>Send Message</span>
-              </button>
-              
-              <div class="secure-feedback" id="contactSecureFeedback">
-                Message transmission complete.
-              </div>
+            </div>
+            
+            <button class="cyber-btn" onclick="submitSecureMessage()" style="margin-top: 8px; width: 100%; justify-content: center;">
+              <span>Send Message</span>
+            </button>
+            
+            <div class="secure-feedback" id="contactSecureFeedback">
+              Message transmission complete.
             </div>
           </div>
         </div>
       </div>
+      
+      <!-- Rich Production-style Website Footer -->
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <!-- Col 1: Bio -->
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; color: #fff; margin: 0 0 16px 0; font-weight: 700; letter-spacing: -0.01em;">SABARITHAN P.</h4>
+            <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.6; margin: 0;">
+             Every project here started with a simple curiosity. Some became lessons, some became late nights, and a few became things I'm truly proud to share.
+            </p>
+          </div>
+          <!-- Col 2: Navigation -->
+          <div class="footer-col">
+            <h5 style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyber-cyan); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 18px 0;">Navigation</h5>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+              <li><a href="#" onclick="navigateTo(0); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">01 // Home</a></li>
+              <li><a href="#" onclick="navigateTo(1); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">02 // About</a></li>
+              <li><a href="#" onclick="navigateTo(2); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">03 // Experience</a></li>
+              <li><a href="#" onclick="navigateTo(4); return false;" style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; transition: color 0.2s;">04 // Projects</a></li>
+            </ul>
+          </div>
+          <!-- Col 3: Direct Connect -->
+          <div class="footer-col">
+            <h5 style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyber-cyan); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 18px 0;">Direct Connect</h5>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+              <li>
+                <a href="mailto:sabarithanpalanivel@gmail.com" class="footer-link" style="text-decoration: none;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <span>Mail Link</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+919360980651" class="footer-link" style="text-decoration: none;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                  <span>+91 9360980651</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Col 4: Social Channels -->
+          <div class="footer-col">
+            <h5 style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyber-cyan); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 18px 0;">Social Channels</h5>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+              <li>
+                <a href="https://www.linkedin.com/in/sabarithan-palanivel-302852293/" target="_blank" class="footer-link" style="text-decoration: none;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  <span>LinkedIn ↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/SABARITHAN-P" target="_blank" class="footer-link" style="text-decoration: none;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>GitHub ↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/sabari__1012/" target="_blank" class="footer-link" style="text-decoration: none;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  <span>Instagram ↗</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Bottom bar of footer -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 20px;">
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+            © 2026 SABARITHAN PALANIVEL. ALL RIGHTS RESERVED.
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #34c759; box-shadow: 0 0 6px #34c759;"></span>
+            <span>SYSTEM: ONLINE // ENCRYPTED</span>
+          </div>
+        </div>
+      </footer>
     </section>
 
   </div>
@@ -465,28 +775,36 @@
   <div class="floating-dock-container">
     <div class="dock">
       <button class="dock-item active" onclick="navigateTo(0)" title="01 // Core Landing">
-        <span style="font-size: 1.25rem;">🏠</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <span class="dock-tooltip">01 // Core Landing</span>
       </button>
-      <button class="dock-item" onclick="navigateTo(1)" title="02 // Vertex Centerpiece">
-        <span style="font-size: 1.25rem;">⚡</span>
-        <span class="dock-tooltip">02 // Vertex Centerpiece</span>
+      <button class="dock-item" onclick="navigateTo(1)" title="02 // Profile Details">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="dock-tooltip">02 // Profile Details</span>
       </button>
-      <button class="dock-item" onclick="navigateTo(2)" title="03 // Launch Deck">
-        <span style="font-size: 1.25rem;">🚀</span>
-        <span class="dock-tooltip">03 // Launch Deck</span>
+      <button class="dock-item" onclick="navigateTo(2)" title="03 // Professional History">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="dock-tooltip">03 // Professional History</span>
       </button>
-      <button class="dock-item" onclick="navigateTo(3)" title="04 // Command Center">
-        <span style="font-size: 1.25rem;">⚙️</span>
-        <span class="dock-tooltip">04 // Command Center</span>
+      <button class="dock-item" onclick="navigateTo(4)" title="04 // Launch Deck">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4.5a2.18 2.18 0 0 1 2.91.09c.79.79.79 2.07-.09 2.91A22 22 0 0 0 9 12z"/><path d="M15 15v5s-3.03-.55-4.5-2a2.18 2.18 0 0 1 .09-2.91c.79-.79 2.07-.79 2.91.09A22 22 0 0 0 15 15z"/></svg>
+        <span class="dock-tooltip">04 // Launch Deck</span>
       </button>
-      <button class="dock-item" onclick="navigateTo(4)" title="05 // System Timeline">
-        <span style="font-size: 1.25rem;">📅</span>
-        <span class="dock-tooltip">05 // System Timeline</span>
+      <button class="dock-item" onclick="navigateTo(5)" title="05 // Coding Profiles">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <span class="dock-tooltip">05 // Coding Profiles</span>
       </button>
-      <button class="dock-item" onclick="navigateTo(5)" title="06 // Secure Port">
-        <span style="font-size: 1.25rem;">✉️</span>
-        <span class="dock-tooltip">06 // Secure Port</span>
+      <button class="dock-item" onclick="navigateTo(6)" title="06 // Command Center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="2" y1="14" x2="6" y2="14"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="18" y1="16" x2="22" y2="16"/></svg>
+        <span class="dock-tooltip">06 // Command Center</span>
+      </button>
+      <button class="dock-item" onclick="navigateTo(7)" title="07 // Milestones & Audits">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"/><path d="M12 2a7 7 0 0 0-7 7c0 2.52 2 6 7 6s7-3.48 7-7a7 7 0 0 0-7-7z"/></svg>
+        <span class="dock-tooltip">07 // Milestones & Audits</span>
+      </button>
+      <button class="dock-item" onclick="navigateTo(8)" title="08 // Secure Port">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span class="dock-tooltip">08 // Secure Port</span>
       </button>
     </div>
   </div>
@@ -496,9 +814,9 @@
     /* ==========================================================================
        1. GLOBAL SYSTEM PROPERTIES
        ========================================================================== */
-    const SECTORS = ['SEC_01_CORE', 'SEC_02_VERTEX', 'SEC_03_LAUNCH', 'SEC_04_CMDCENT', 'SEC_05_TIMELOG', 'SEC_06_SECURE'];
-    let currentSectionIndex = 0;
-    const totalSections = 6;
+    const SECTORS = ['SEC_01_CORE', 'SEC_02_ABOUT', 'SEC_03_EXPERIENCE', 'SEC_04_VERTEX', 'SEC_05_LAUNCH', 'SEC_06_PROFILES', 'SEC_07_CMDCENT', 'SEC_08_ACHIEVEMENTS', 'SEC_09_SECURE'];
+    let currentSectionIndex = -1;
+    const totalSections = 9;
 
     // Time tracker
     const hudTime = document.getElementById('hud-time');
@@ -587,14 +905,28 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const index = Array.from(sections).indexOf(entry.target);
-          currentSectionIndex = index;
           
-          if (hudSector) hudSector.textContent = SECTORS[index];
-          if (hudIndexNum) hudIndexNum.textContent = String(index + 1).padStart(2, '0');
-          
-          dockItems.forEach((btn, idx) => {
-            btn.classList.toggle('active', idx === index);
-          });
+          if (currentSectionIndex !== index) {
+            currentSectionIndex = index;
+            
+            if (hudSector) hudSector.textContent = SECTORS[index];
+            if (hudIndexNum) hudIndexNum.textContent = String(index + 1).padStart(2, '0');
+            
+            // Map section index (0-8) to dock item index (0-7)
+            let mappedDockIndex = -1;
+            if (index === 0) mappedDockIndex = 0;
+            else if (index === 1) mappedDockIndex = 1;
+            else if (index === 2) mappedDockIndex = 2; // Experience is at Index 2
+            else if (index === 3) mappedDockIndex = -1; // Skip Vertex Connect centerpiece
+            else if (index >= 4) mappedDockIndex = index - 1; // Offset due to Vertex removal
+            
+            dockItems.forEach((btn, idx) => {
+              btn.classList.toggle('active', idx === mappedDockIndex);
+            });
+
+            // Show dock immediately upon entering a new section
+            showDock();
+          }
         }
       });
     }, observerOptions);
@@ -604,7 +936,38 @@
     function navigateTo(index) {
       if (index < 0 || index >= sections.length) return;
       sections[index].scrollIntoView({ behavior: 'smooth' });
+      showDock();
     }
+
+    /* Floating Dock Auto-Hide Logic */
+    let dockTimeout;
+    const dockContainer = document.querySelector('.floating-dock-container');
+
+    function showDock() {
+      if (!dockContainer) return;
+      dockContainer.classList.remove('dock-hidden');
+      resetDockTimer();
+    }
+
+    function hideDock() {
+      // Auto-hide only if the user is not actively hovering over the dock
+      if (dockContainer && !dockContainer.matches(':hover')) {
+        dockContainer.classList.add('dock-hidden');
+      }
+    }
+
+    function resetDockTimer() {
+      clearTimeout(dockTimeout);
+      dockTimeout = setTimeout(hideDock, 2500); // 2.5 seconds auto-hide window
+    }
+
+    if (dockContainer) {
+      dockContainer.addEventListener('mouseenter', showDock);
+      dockContainer.addEventListener('mouseleave', resetDockTimer);
+    }
+
+    // Initialize auto-hide timer
+    resetDockTimer();
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowDown' || e.key === 'PageDown') {
@@ -613,7 +976,7 @@
       } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
         e.preventDefault();
         navigateTo(currentSectionIndex - 1);
-      } else if (e.key >= '1' && e.key <= '6') {
+      } else if (e.key >= '1' && e.key <= '9') {
         navigateTo(parseInt(e.key) - 1);
       }
     });
@@ -624,6 +987,7 @@
     function submitSecureMessage() {
       const name = document.getElementById('contact-name').value.trim();
       const email = document.getElementById('contact-email').value.trim();
+      const subject = document.getElementById('contact-subject').value.trim();
       const msg = document.getElementById('contact-message').value.trim();
       const fb = document.getElementById('contactSecureFeedback');
 
@@ -636,17 +1000,58 @@
 
       fb.style.display = 'block';
       fb.style.color = 'var(--cyber-cyan)';
-      fb.innerHTML = 'Sending message...';
+      fb.innerHTML = 'Establishing secure link...';
       
-      setTimeout(() => {
-        fb.style.color = '#34c759';
-        fb.innerHTML = 'Message sent successfully! Sabarithan will get back to you shortly.';
-        
-        document.getElementById('contact-name').value = '';
-        document.getElementById('contact-email').value = '';
-        document.getElementById('contact-subject').value = '';
-        document.getElementById('contact-message').value = '';
-      }, 1000);
+      // Web3Forms API Integration
+      // Go to https://web3forms.com to get your free access key
+      const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; 
+      
+      if (ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+        // Fallback simulation for local/demo environment
+        setTimeout(() => {
+          fb.style.color = '#34c759';
+          fb.innerHTML = 'Link simulated successfully! (Add your Web3Forms Key in index.html to get actual emails)';
+          
+          document.getElementById('contact-name').value = '';
+          document.getElementById('contact-email').value = '';
+          document.getElementById('contact-subject').value = '';
+          document.getElementById('contact-message').value = '';
+        }, 1200);
+        return;
+      }
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          name: name,
+          email: email,
+          subject: subject || "Portfolio Contact Form Submission",
+          message: msg
+        })
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          fb.style.color = '#34c759';
+          fb.innerHTML = 'Message transmitted successfully! I will get back to you shortly.';
+          document.getElementById('contact-name').value = '';
+          document.getElementById('contact-email').value = '';
+          document.getElementById('contact-subject').value = '';
+          document.getElementById('contact-message').value = '';
+        } else {
+          fb.style.color = '#ff3b30';
+          fb.innerHTML = 'Transmission failed: ' + json.message;
+        }
+      })
+      .catch(error => {
+        fb.style.color = '#ff3b30';
+        fb.innerHTML = 'Network error. Secure connection interrupted.';
+      });
     }
 
     /* ==========================================================================
@@ -675,6 +1080,32 @@
       }
     );
 
+    // Stagger reveal on About highlights bento cards
+    gsap.from('#sec-about .tech-panel', {
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '#sec-about',
+        start: 'top 75%'
+      }
+    });
+
+    // Stagger reveal on Profiles bento cards
+    gsap.from('#sec-profiles .profile-card', {
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '#sec-profiles',
+        start: 'top 75%'
+      }
+    });
+
     // Stagger reveal on Projects bento cards
     gsap.from('#sec-projects .project-console', {
       y: 80,
@@ -697,6 +1128,31 @@
       ease: 'power3.out',
       scrollTrigger: {
         trigger: '#sec-skills',
+        start: 'top 75%'
+      }
+    });
+
+    // Reveal Experience card on scroll
+    gsap.from('#sec-experience .experience-item', {
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '#sec-experience',
+        start: 'top 75%'
+      }
+    });
+
+    // Stagger reveal on Achievements cards on scroll
+    gsap.from('#sec-achievements .achievement-card', {
+      y: 50,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '#sec-achievements',
         start: 'top 75%'
       }
     });
